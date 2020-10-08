@@ -1,6 +1,6 @@
 my-example-job:
    stage:                           build # One of the stages listed below this job (required)
-   image:                           paritytech/tools:latest # Any docker image (required)
+   image:                           paritytech/ci-linux # Any docker image (required)
    script:
      - echo "List of shell commands to run in your job"
      - echo "You can also just specify a script here, like so:"
