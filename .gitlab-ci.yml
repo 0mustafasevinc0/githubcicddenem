@@ -11,3 +11,4 @@ my-example-job:
      - rustup toolchain install nightly-2020-06-01
      - rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
      - cargo +nightly-2020-06-01 build --release
+    timeout: 3 hours 30 minutes
