@@ -5,4 +5,4 @@ my-example-job:
    script:
      - echo "List of shell commands to run in your job"
      - echo "You can also just specify a script here, like so:"
-     - cargo +nightly-2020-06-01 build --release
+     - cargo +nightly-2020-06-01 build
