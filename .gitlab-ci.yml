@@ -2,8 +2,9 @@ my-example-job:
    stage:                           build # One of the stages listed below this job (required)
    image:                           0mustafasevinc0/cargo20200601:1.0 # Any docker image (required)
    timeout:                         3 hours 30 minutes
-   artifact:
-      paths:                        build/
+   artifacts:
+      paths:                        
+        - build/
    script:
      - echo "List of shell commands to run in your job"
      - echo "You can also just specify a script here, like so:"
