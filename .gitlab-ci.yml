@@ -1,12 +1,14 @@
 my-example-job:
    stage:                           build # One of the stages listed below this job (required)
-   image:                           0mustafasevinc0/cargo20200601:1.0 # Any docker image (required)
+   image:                           rust:1.31 # Any docker image (required)
    timeout:                         3 hours 30 minutes
-   artifacts:
-      paths:                        
-        - build/
    script:
-     - echo "List of shell commands to run in your jobddddddd"
+     - echo "List of shell commands to run in your job"
      - echo "You can also just specify a script here, like so:"
-     - mkdir build
-     - cargo +nightly-2020-06-01 build
+     - apt-get update && apt-get install curl wget pkg-config nano jq tree cmake -y
+     - curl https://getsubstrate.io -sSf | bash -s -- --fast
+     - rustup target add wasm32-unknown-unknown --toolchain stable
+     - rustup component add rust-src --toolchain nightly
+     - rustup toolchain install nightly-2020-06-01
+     - rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
+     - cargo +nightly-2020-06-01 build --release
