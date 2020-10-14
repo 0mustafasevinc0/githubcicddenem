@@ -6,7 +6,7 @@ my-example-job:
       paths:                        
         - build/
    script:
-     - echo "List of shell commands to run in your jobddddddd"
+     - echo "List of shell commands to run in your jobeeeeee"
      - echo "You can also just specify a script here, like so:"
      - mkdir build
      - cargo +nightly-2020-06-01 build
