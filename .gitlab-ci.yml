@@ -9,6 +9,6 @@ my-example-job:
      - sudo curl https://getsubstrate.io -sSf | bash -s -- --fast
      - sudo rustup target add wasm32-unknown-unknown --toolchain stable
      - sudo rustup component add rust-src --toolchain nightly
-     - sudorustup toolchain install nightly-2020-06-01
+     - sudo rustup toolchain install nightly-2020-06-01
      - sudo rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
      - sudo cargo +nightly-2020-06-01 build --release
