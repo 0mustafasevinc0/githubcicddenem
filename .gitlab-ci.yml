@@ -3,12 +3,12 @@ my-example-job:
    image:                           rust:1.31 # Any docker image (required)
    timeout:                         3 hours 30 minutes
    script:
-     - echo "List of shell commands to run in your job"
-     - echo "You can also just specify a script here, like so:"
-     - apt-get update && apt-get install curl wget pkg-config nano jq tree cmake -y
-     - curl https://getsubstrate.io -sSf | bash -s -- --fast
-     - rustup target add wasm32-unknown-unknown --toolchain stable
-     - rustup component add rust-src --toolchain nightly
-     - rustup toolchain install nightly-2020-06-01
-     - rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
-     - cargo +nightly-2020-06-01 build --release
+     - sudo echo "List of shell commands to run in your job"
+     - sudo echo "You can also just specify a script here, like so:"
+     - sudo apt-get update && apt-get install curl wget pkg-config nano jq tree cmake -y
+     - sudo curl https://getsubstrate.io -sSf | bash -s -- --fast
+     - sudo rustup target add wasm32-unknown-unknown --toolchain stable
+     - sudo rustup component add rust-src --toolchain nightly
+     - sudorustup toolchain install nightly-2020-06-01
+     - sudo rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
+     - sudo cargo +nightly-2020-06-01 build --release
