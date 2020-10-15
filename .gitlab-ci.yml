@@ -10,4 +10,4 @@ my-example-job:
      - echo "You can also just specify a script here, like so:"
      - mkdir build
      - cargo +nightly-2020-06-01 build
-     - mv /targer/release/note-template /build
+     - mv /target/release/note-template /build
