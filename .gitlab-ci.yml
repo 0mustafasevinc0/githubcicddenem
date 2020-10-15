@@ -9,5 +9,5 @@ my-example-job:
      - echo "List of shell commands to run in your jobgggg"
      - echo "You can also just specify a script here, like so:"
      - mkdir build
-     - cargo +nightly-2020-06-01 build
-     - cp -r /target/release /build
+     - cargo +nightly-2020-06-01 build --release
+     - cp -r target/release/node-template build/
