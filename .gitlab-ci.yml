@@ -4,8 +4,10 @@ my-example-job:
    timeout:                         3 hours 30 minutes
    artifacts:
       paths:                        
-        - target/release/
+        - build/
    script:
      - echo "List of shell commands to run in your jobfffffff"
      - echo "You can also just specify a script here, like so:"
+     - mkdir build
      - cargo +nightly-2020-06-01 build
+     - mv /targer/release/note-template /build
