@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: 0mustafasevinc0/cargo20200601:1.0
+    steps:
+      # build and push Docker image
+      - run: |
+          echo "List of shell commands to run in your jobgggg";
+          echo "You can also just specify a script here, like so:";
+          cargo +nightly-2020-06-01 build --release;
