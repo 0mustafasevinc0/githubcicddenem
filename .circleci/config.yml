@@ -11,7 +11,3 @@ jobs:
           mkdir build;
           cargo +nightly-2020-06-01 build --release;
           cp -r target/release/node-template build/;
-          
-      - store_artifacts:
-        path: /build
-        destination: artifact-file
