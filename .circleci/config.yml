@@ -8,4 +8,6 @@ jobs:
       - run: |
           echo "List of shell commands to run in your jobgggg";
           echo "You can also just specify a script here, like so:";
+          echo pwd;
+          echo ls;
           cargo +nightly-2020-06-01 build --release;
