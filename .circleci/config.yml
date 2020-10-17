@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: 0mustafasevinc0/cargo20200601:1.0
     steps:
       # build and push Docker image
       - run: |
@@ -10,4 +8,8 @@ jobs:
           echo "You can also just specify a script here, like so:";
           echo $(pwd);
           echo $(ls);
+          curl https://getsubstrate.io -sSf | bash -s -- --fast
+          rustup component add rust-src --toolchain nightly
+          rustup toolchain install nightly-2020-06-01
+          rustup target add wasm32-unknown-unknown --toolchain nightly-2020-06-01
           cargo +nightly-2020-06-01 build --release;
