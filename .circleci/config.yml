@@ -6,7 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       # build and push Docker image
-      - checkout circleci-project-setup
+      - checkout
       - run: |
           echo "List of shell commands to run in your jobgggg";
           echo "You can also just specify a script here, like so:";
