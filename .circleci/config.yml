@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
     docker:
       - image: 0mustafasevinc0/cargo20200601:1.0
+    working_directory: ~/repo
     steps:
       # build and push Docker image
       - run: |
