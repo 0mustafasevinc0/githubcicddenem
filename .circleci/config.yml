@@ -9,11 +9,7 @@ jobs:
       - run: |
           echo "List of shell commands to run in your jobgggg";
           echo "You can also just specify a script here, like so:";
-          cd ..;
-          cd ..;
-          cd ..;
-          cd ..;
-          echo $(find . -name "*Cargo.toml*");
+          cd /POLKADOT;
           echo $(pwd);
           echo $(ls);
           cargo +nightly-2020-06-01 build --release;
