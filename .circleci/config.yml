@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   build:
+    working_directory: ~/repo
     docker:
       - image: 0mustafasevinc0/cargo20200601:1.0
     steps:
@@ -10,5 +11,4 @@ jobs:
           echo "You can also just specify a script here, like so:";
           echo $(pwd);
           echo $(ls);
-          find . -name "*Cargo.toml*";
           cargo +nightly-2020-06-01 build --release;
