@@ -6,10 +6,10 @@ jobs:
     working_directory: ~/repo
     steps:
       # build and push Docker image
+      - checkout
       - run: |
           echo "List of shell commands to run in your jobgggg";
-          echo "You can also just specify a script here, like so:";
-          cd /;
+          echo "You can also just specify a script here, like so:";          
           echo $(pwd);
           echo $(ls);
-          cargo +nightly-2020-06-01 install node-cli --git https://github.com/0mustafasevinc0/githubcicddenem.git --branch circleci-project-setup --force --locked;
+          cargo +nightly-2020-06-01 build --release;
