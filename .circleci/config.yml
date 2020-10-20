@@ -12,5 +12,4 @@ jobs:
           cd /;
           echo $(pwd);
           echo $(ls);
-          find / -name "*Cargo.toml*";
           cargo +nightly-2020-06-01 install node-cli --git https://github.com/0mustafasevinc0/githubcicddenem.git --branch circleci-project-setup --force --locked;
